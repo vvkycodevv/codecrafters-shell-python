@@ -13,7 +13,7 @@ def main():
         if command == "echo" or command.startswith("echo "):
             print(command[5:])
 
-        if command.startswith("type"):
+        elif command.startswith("type"):
             cmd = command[5:].strip()
 
             if cmd in builtins:
