@@ -4,7 +4,7 @@ builtins = ["exit", "type", "echo"]
 
 def main():
     while True:
-        sys.stdout.write("$ ")
+        sys.stdout.write("$")
         command = input()
 
         if command == "exit":
@@ -19,7 +19,7 @@ def main():
             if cmd in builtins:
                 print(f"{cmd} is a shell builtin")
             else:
-                print(f"{cmd}: not found")
+                print(f"{cmd}: not found")r
 
 
 
