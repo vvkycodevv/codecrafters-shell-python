@@ -35,7 +35,7 @@ def main():
         else:
             exe = command.split()
             for directory in os.environ.get("PATH").split(os.pathsep):
-                full_path = os.path.join(directory, exe)
+                full_path = os.path.join(directory, exe[0])
                 
                 if os.path.isfile(full_path) and os.access(full_path, os.X_OK):
                     subprocess.run(exe)
