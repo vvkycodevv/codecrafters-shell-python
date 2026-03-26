@@ -10,7 +10,7 @@ def main():
         if command == "exit":
             break
 
-        if command.startswith("echo"):
+        if command == "echo" or command.startswith("echo "):
             print(command[5:])
 
         if command.startswith("type"):
@@ -20,6 +20,9 @@ def main():
                 print(f"{cmd} is a shell builtin")
             else:
                 print(f"{cmd}: not found")
+        
+        else:
+            print(f"{command}: not found")
 
 
 
