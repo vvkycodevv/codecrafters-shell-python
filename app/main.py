@@ -1,5 +1,6 @@
 import sys
 import os
+import subprocess
 
 builtins = ["exit", "type", "echo"]
 
@@ -30,9 +31,16 @@ def main():
 
                 else:
                     print(f"{cmd}: not found")
-        
+
         else:
-            print(f"{command}: not found")
+            exe = command.split()
+            for directory in os.environ.get("PATH").split(os.pathsep):
+                full_path = os.path.join(directory, exe)
+                
+                if os.path.isfile(full_path) and os.access(full_path, os.X_OK):
+                    subprocess.run(exe)
+        
+        print(f"{command}: not found")
 
 
 
