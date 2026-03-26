@@ -39,8 +39,10 @@ def main():
                 
                 if os.path.isfile(full_path) and os.access(full_path, os.X_OK):
                     subprocess.run(exe)
+                    break
         
-        print(f"{command}: not found")
+                else:
+                    print(f"{command}: not found")
 
 
 
