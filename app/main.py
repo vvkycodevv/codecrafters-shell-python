@@ -4,7 +4,7 @@ builtins = ["exit", "type", "echo"]
 
 def main():
     while True:
-        sys.stdout.write("$")
+        sys.stdout.write("$ ")
         command = input()
 
         if command == "exit":
