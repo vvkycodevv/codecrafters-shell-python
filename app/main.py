@@ -41,8 +41,8 @@ def main():
                     subprocess.run(exe)
                     break
         
-                else:
-                    print(f"{command}: not found")
+            else:
+                print(f"{command}: not found")
 
 
 
